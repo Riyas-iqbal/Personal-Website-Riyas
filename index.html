@@ -12,6 +12,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<body class="is-preload">
@@ -51,7 +52,7 @@
 							<h2>Skills</h2>
 						</header>
 						<div class="content">
-							<p><strong>Mern Stack</strong> is a collection of technologies that enables faster application development. It is used by developers worldwide. The main purpose of using MERN stack is to develop apps using JavaScript only. This is because the four technologies that make up the technology stack are all JS-based</p>
+							<p><strong>Mern Stack -</strong> Computer Application Professional with excellent problem solving abilities and process- thinking skills ,I am a teamplayer, analytical minded, productive oriented, effective team manager. My key area of interest is Javascript and very much focused in doing Projects using the modern trends like Node JS, React JS, Express JS and also in MONGODB. As I am a MERN Stack Developer, I Will be assisting my clients with the entire process of making a web application</p>
 							<ul class="feature-icons">
 								<li class="fab fa-html5">HTML5</li>
 								<li class="fab fa-css3-alt">CSS3</li>
@@ -60,14 +61,7 @@
 								<li class="fab fa-react">React.js</li>
 								<li class="fab fa-node">Node.js</li>
 							</ul>
-							<p>MERN provides an end-to-end development environment with a full-stack development environment.
-								Model View Controller (MVC) architecture is supported by MERN, allowing developers to create workflows easily.
-								MERN comes with testing tools that make detecting errors a breeze.
-								Because every line of code in mern full-stack development is written in JavaScript, developers can easily integrate and work with various frameworks, whether for the client-side or server-side.
-								MongoDB integrates well with Node.js, making it easier to store, represent, and manipulate JSON data in web apps.
-								Express encapsulates HTTP requests and responses in URL mappings for server-side functionality.
-								React is useful for creating interactive HTML UIs and interacting with remote servers.
-								The whole thing makes it easy for JSON data to flow from front to back while making it faster to build and debug.</p>
+							<p></p>
 						</div>
 					</section>
 
@@ -421,7 +415,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 						</header>
 						<div class="content">
 							<p><strong>Connect<br></strong> Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>
-							<form>
+							<form id="submit-form" action="">
 								<div class="fields">
 									<div class="field half">
 										<input type="text" name="name" id="name" onblur="emptynamecheck()" oninput="namecheck()" placeholder="Name" />
@@ -482,6 +476,26 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				$("#submit-form").submit((e)=>{
+					e.preventDefault()
+					$.ajax({
+						url:"https://script.google.com/macros/s/AKfycbz9QF0pQXP62wvgd4wL81NxtUfBcpl8RSs1UD1jRf9tzFH7VIFLuVp-PyAGxIRjfc0n1Q/exec",
+						data:$("#submit-form").serialize(),
+						method:"post",
+						success:function (response){
+							alert("Message successfully Sent")
+							window.location.reload()
+							//window.location.href="https://google.com"
+						},
+						error:function (err){
+							alert("Something Error")
+			
+						}
+					})
+				})
+			</script>
 
 	</body>
 </html>
